@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@IMPORT URL('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+  /* background-color: black;
+  background: rgb(2,0,36); */
+  background-image: url(/img/524.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.header{
+ background: rgba(10, 26, 36, 0.76);  
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+height: 10vh;
+  display:flex;
+  align-content: center;
+  position: relative;
+}
+.logo{
+  height: 10vh;
+  width: 400px;
+background-image: url(../img/logo.png);
+background-repeat: no-repeat;
+background-size: contain;}
+
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: nowrap;
+
+}
+
+.nav_a  {
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;   
+  text-decoration: none;
+}
+
+
+.wrapper_main{
+    position: relative;
+    width: 100%;
+    height:70vh;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+
+.half_screen{
+    display:flex;
+    align-content: center;
+}
+.half_screen--left{
+  margin-top: 10vh;;
+  width: 55%;
+  overflow: hidden;
+  width: 70vh;
+
+ 
+}
+.half_screen--right{
+margin-top: 10vh;
+  width: 40%;
+  width: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+justify-content: space-between;
+align-content: flex-start;
+}
+
+
+.down_bar{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+ 
+
+  .side_menu_item{
+display:flex;
+justify-content: center;
+width: 48%;
+  }
+
+  .btn{	
+    position:relative;
+    overflow:hidden;
+    text-transform:uppercase;
+    text-decoration: none;
+    letter-spacing:5px;
+    color: #0b1f36;
+    font-size: 20px;
+font-weight:600;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid rgb(211, 229, 255);
+    background-color:rgba(160, 204, 245, 0.836);
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    min-height: 10vh;
+    margin-bottom:25px;
+  
+  }
+  .btn:focus {
+    color: #fff;
+    outline:none;
+  }
+
+  .btn:before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+  }
+  .btn:hover{
+    color:#fff;
+    background-color: rgba(7, 35, 87, 0.637);
+
+  }
+  .btn:hover::before {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
+  }
+  @-webkit-keyframes shine {
+    100% {
+      left: 125%;
+    }
+  }
+  @keyframes shine {
+    100% {
+      left: 125%;
+    }
+  }
+  .side_menu_hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255,255, 0.75), rgba(255, 255, 255, 0));
+  margin-block-end: 5px;
+    width: 100%;
+}
+
+
+.btn--angels{
+  background-image: url(../img/logo_fundacja_white.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.8;
+  font-size: 1rem;
+    letter-spacing:1px;
+    color: #acacac00;
+      transition: 0.8s;
+   width: 40%;
+   border: 1;
+   background-color:rgba(160, 204, 245, 0.0);
+  
+  }
+
+  .btn--koalicja{
+    background-image: url(../img/kzd8h.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0.8;
+    font-size: 1rem;
+      letter-spacing:1px;
+      color: #acacac00;
+        transition: 0.8s;
+        width: 40%;
+        border: 1;
+        background-color:rgba(160, 204, 245, 0);
+        transition: all 0.3s ease-in-out;
+      
+        min-height: 10vh;
+
+        
+    }
+    .btn--koalicja:hover {
+    
+      color:#fff;
+      background-color: rgba(7, 35, 87, 0);
+
+    
+    }
+
+
+    /* ==========koalica.html======================*/
+    .wrapper_koalicja{
+      margin-top: 10vh;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  .half-screen--kzdlogo{
+    background-image: url(../img/kzd8.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 60vh;
+
+  }
+ .half-screen--text{
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 60vh;
+  padding:50px
+
+  }
+  .text_container{
+    width: 100%;
+  }
+  .button_container{
+    width: 100%;
+  }
+  .paragraph{
+    margin: 10px 5px 5px 15px;
+    font-size: 1.2rem;
+    text-align: justify;
+
+  }
+  .map{
+    width: 100%;
+    margin-top: 50px;
+  }
+  .list{
+    margin:20px 15px 15px 25px;
+    font-size: 1.2rem;
+  }
+  .subtitle  {
+  text-align: center;
+  margin: 40px 1px 40px
+ } 
+
+ /* footer */
+ .coded-div {
+  width: 50%;
+  text-align: right;
+}
+footer {
+  width: 100%;
+  padding: 20px;
+  height: 20vh;
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba(10, 26, 36, 0.76);  
+}
+
+.priv-div {
+  width: 50%;
+  text-align: right;
+}
