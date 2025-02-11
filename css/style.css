@@ -67,7 +67,7 @@ flex-wrap: wrap;
 }
 
 .wrapper_main{
-    height:70vh;
+    height:75vh;
     justify-content: space-around;
 }
 
@@ -302,7 +302,7 @@ font-weight:600;
 }
 
 .footer_main {
-  height: 20vh;
+  height: 15vh;
 }
 
 .priv-div {
@@ -392,6 +392,7 @@ h3{
 p{
   font-size: 1.2rem;
   padding-bottom: 20px;
+  width: 100%;
 }
 .list{
   font-size: 1.2rem;
