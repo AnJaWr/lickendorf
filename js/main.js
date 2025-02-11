@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function loadCSSBasedOnDevice() {
   // Sprawdzenie typu urządzenia
   if (window.matchMedia("(max-width: 600px)").matches) {
@@ -26,42 +25,13 @@ window.addEventListener("resize", loadCSSBasedOnDevice);
 // Wywołanie funkcji przy załadowaniu strony
 window.addEventListener("load", loadCSSBasedOnDevice);
 
-var videos = document.getElementById("video_background").getElementsByTagName("video");
-var currentVideoIndex = 0;
-
-function playNextVideo() {
-  var currentVideo = videos[currentVideoIndex];
-  currentVideo.pause();
-  currentVideo.classList.remove("active");
-
-  currentVideoIndex = (currentVideoIndex + 1) % videos.length;
-
-  var nextVideo = videos[currentVideoIndex];
-  nextVideo.currentTime = 0; // Przewiń do początku filmu
-  nextVideo.classList.add("active");
-  nextVideo.play();
-}
-
-function checkVideoProgress() {
-  var currentVideo = videos[currentVideoIndex];
-  if (currentVideo.currentTime >= currentVideo.duration) {
-    playNextVideo();
-  }
-}
-
-for (var i = 0; i < videos.length; i++) {
-  videos[i].addEventListener("timeupdate", checkVideoProgress);
-}
-
-// Rozpocznij odtwarzanie pierwszego wideo
-videos[currentVideoIndex].classList.add("active");
-videos[currentVideoIndex].play();
-
 function redirectToURL(event) {
   event.preventDefault(); 
 
-  var href = event.target.getAttribute("href");
-  window.location.href = href;
+  var href = event.target.getAttribute("data-href");
+  if (href) {
+    window.location.href = href;
+  }
 }
 
 window.addEventListener("DOMContentLoaded", function() {
@@ -101,108 +71,31 @@ function showCookieNotice() {
 
   notice.appendChild(button);
   document.body.appendChild(notice);
-=======
-function loadCSSBasedOnDevice() {
-  // Sprawdzenie typu urządzenia
-  if (window.matchMedia("(max-width: 600px)").matches) {
-    // Wczytaj CSS dla małego ekranu
-    loadCSS("css/small_screen_style.css?v1");
-  } else if (window.matchMedia("(min-width: 601px) and (max-width: 1024px)").matches) {
-    // Wczytaj CSS dla średniego ekranu
-    loadCSS("css/style.css?v1");
-  } else {
-    // Wczytaj CSS dla dużego ekranu
-    loadCSS("css/style.css?v1");
-  }
 }
 
-function loadCSS(filename) {
-  var link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.href = filename;
-  document.head.appendChild(link);
-}
-
-// Wywołanie funkcji w momencie zmiany wielkości ekranu
-window.addEventListener("resize", loadCSSBasedOnDevice);
-
-// Wywołanie funkcji przy załadowaniu strony
-window.addEventListener("load", loadCSSBasedOnDevice);
-
-var videos = document.getElementById("video_background").getElementsByTagName("video");
-var currentVideoIndex = 0;
-
-function playNextVideo() {
-  var currentVideo = videos[currentVideoIndex];
-  currentVideo.pause();
-  currentVideo.classList.remove("active");
-
-  currentVideoIndex = (currentVideoIndex + 1) % videos.length;
-
-  var nextVideo = videos[currentVideoIndex];
-  nextVideo.currentTime = 0; // Przewiń do początku filmu
-  nextVideo.classList.add("active");
-  nextVideo.play();
-}
-
-function checkVideoProgress() {
-  var currentVideo = videos[currentVideoIndex];
-  if (currentVideo.currentTime >= currentVideo.duration) {
-    playNextVideo();
-  }
-}
-
-for (var i = 0; i < videos.length; i++) {
-  videos[i].addEventListener("timeupdate", checkVideoProgress);
-}
-
-// Rozpocznij odtwarzanie pierwszego wideo
-videos[currentVideoIndex].classList.add("active");
-videos[currentVideoIndex].play();
-
-function redirectToURL(event) {
-  event.preventDefault(); 
-
-  var href = event.target.getAttribute("href");
-  window.location.href = href;
-}
-
-window.addEventListener("DOMContentLoaded", function() {
-  var buttons = document.getElementsByClassName("btn");
-
-  for (var i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener("click", redirectToURL);
-  }
-});
-window.addEventListener("DOMContentLoaded", function() {
-  var logo = document.getElementById("logo");
-
-  logo.addEventListener("click", function() {
-    window.location.href = "index.html";
-  });
+document.getElementById("leczenie").addEventListener("click", function() {
+  var submenu = document.getElementById("submenu");
+  submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
 });
 
-window.addEventListener("DOMContentLoaded", function() {
-  var cookieNotice = localStorage.getItem("cookieNotice");
+// document.addEventListener("DOMContentLoaded", function() {
+  var banner = document.getElementById("cookie-banner");
+  var acceptButton = document.getElementById("accept-cookies");
+  var rejectButton = document.getElementById("reject-cookies");
 
-  if (!cookieNotice) {
-    showCookieNotice();
-    localStorage.setItem("cookieNotice", true);
+  // Sprawdzamy, czy użytkownik podjął decyzję o cookies
+  if (!localStorage.getItem("cookiesAccepted") && !localStorage.getItem("cookiesRejected")) {
+      banner.classList.add("show"); // Pokazujemy komunikat
   }
-});
 
-function showCookieNotice() {
-  var notice = document.createElement("div");
-  notice.classList.add("cookie-notice");
-  notice.innerHTML = "Ta strona używa plików cookie. Kliknij OK, aby zaakceptować.";
-
-  var button = document.createElement("button");
-  button.innerHTML = "OK";
-  button.addEventListener("click", function() {
-    notice.style.display = "none";
+  // Obsługa kliknięcia w "Akceptuję"
+  acceptButton.addEventListener("click", function() {
+      localStorage.setItem("cookiesAccepted", "true");
+      banner.classList.remove("show"); // Ukrywamy komunikat
   });
 
-  notice.appendChild(button);
-  document.body.appendChild(notice);
->>>>>>> 15e526784c5520fc6540c166119074e8af684fc8
-}
+  // Obsługa kliknięcia w "Odrzucam"
+  rejectButton.addEventListener("click", function() {
+      localStorage.setItem("cookiesRejected", "true");
+      banner.classList.remove("show"); // Ukrywamy komunikat
+  });
