@@ -93,3 +93,19 @@ function showCookieNotice() {
       localStorage.setItem("cookiesRejected", "true");
       banner.classList.remove("show"); // Ukrywamy komunikat
   });
+
+
+  document.getElementById("menuToggle").addEventListener("click", function() {
+    var menu = document.getElementById("menu");
+    var icon = this.querySelector(".icon");
+    var text = this.querySelector(".text");
+    
+    menu.classList.toggle("active");
+    if (menu.classList.contains("active")) {
+        icon.textContent = "✖";
+        text.textContent = "Zamknij";
+    } else {
+        icon.textContent = "☰";
+        text.textContent = "Menu";
+    }
+});

@@ -455,3 +455,12 @@ table.minimalistBlack tfoot {
 table.minimalistBlack tfoot td {
   font-size: 14px;
 }
+
+.menu_min{display:none}
+
+
+
+
+nav.menu{
+  display:none;
+}

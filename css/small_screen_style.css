@@ -1,526 +1,500 @@
-<<<<<<< HEAD
-/* Extra small devices (phones, 600px and down)
-@media only screen and (max-width: 600px) {...} */
- @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @IMPORT URL('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media  (max-width: 600px) {
-   
-   
-    .logo{
-      height: 10vh;
-      width: 250px;
-    background-image: url(../img/logo.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-bottom: 10px;
-    }
-    
-    
-    
-    .wrapper_main{
-        display: flex;
-flex-wrap: wrap;}
-    
-    .half_screen{
-        display:flex;
-        align-content: center;
-        width: 100%;
-    }
+*{
 
-    .half_screen--left{
-      margin-top: 10vh;;
-      max-height: auto;
-     
-    }
-    .half_screen--right{
-    margin-top: 5vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.body_main{
+  /* background-color: black;
+  background: rgb(2,0,36); */
+  background-image: url(../img/524.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+color: white;
+}
+.body{
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(245,227,235,1) 100%);;
+}
+.header{
+ background: rgba(3, 13, 34, 0.856);  
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+height: auto;
+  display:flex;
+  align-content: center;
+justify-content: space-around;
+}
+.logo{
+  height: 10vh;
+  width: 400px;
+background-image: url(../img/logo.png);
+background-repeat: no-repeat;
+background-size: contain;}
+
+
+
+
+.nav{
+  display: none;
+}
+nav.menu{
+  display:none;
+}
+
+.menu_min{
+    position: relative;
+    display: inline-block;
+}
+.menu-button {
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.menu-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    min-width: 200px;
+    z-index: 1;
+}
+.menu-content a {
+    color: black;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+.menu-content a:hover {
+    background-color: #ddd;
+}
+.menu:hover .menu-content {
+    display: block;
+}
+
+.wrapper{
 width: 100%;
-      position: relative;
-    }
-    
-    #video_background {
-        position: relative;
-        width: 100vw;
-        height: 25vh;
- 
-        overflow: hidden;
-      }
-      
-      #video_background video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
+display: flex;
+flex-wrap: wrap;
 
-        opacity: 0;
-        transition: opacity 0.5s;
-      } 
-      
-      #video_background video.active {
-        opacity: 1;
-        pointer-events: auto;
-      }
-    
-      .side_menu{
-        width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    
-        justify-content: center;
-      }
-    
-      .side_menu_item{
-    width: 100%;
+}
+
+.wrapper_main{
+    justify-content: space-around;
+}
+
+
+.wrapper-side{
+
+  justify-content: flex-start;
+padding:10px;}
+
+
+.half_screen{
     display:flex;
-    justify-content: center;
-    
-      }
-    
-      .btn{	
-    
-        position:relative;
-        overflow:hidden;
-        text-transform:uppercase;
-        text-decoration: none;
-        letter-spacing:5px;
-        color: #acacac;
-        font-size: 20px;
-        font-weight:lighter;
-        border: 0;
-        cursor: pointer;
-        padding: 10px 20px;
-        border: 1px solid rgba(143,144,145,0.2);
-        background-color:rgba(143,144,145,0.1);
-        transition: all 0.3s ease-in-out;
-        width: 80%;
-        
-        margin-bottom:25px;
-        background-color: rgba(56, 56, 92, 0.637);
-      }
-      .btn:focus {
-        color: #fff;
-        outline:none;
-      }
-      .btn--first{
-        margin-top: 25px;
-      }
-      .btn:before {
-        position: absolute;
-        top: 0;
-        left: -75%;
-        z-index: 2;
-        display: block;
-        content: '';
-        width: 50%;
-        height: 100%;
-        background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
-        background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
-        -webkit-transform: skewX(-25deg);
-        transform: skewX(-25deg);
-      }
-      .btn:hover{
-        color:#fff;
-        background-color: rgba(68, 68, 110, 0.637);
-    
-      }
-      .btn:hover::before {
-        -webkit-animation: shine .75s;
-        animation: shine .75s;
-      }
-      @-webkit-keyframes shine {
-        100% {
-          left: 125%;
-        }
-      }
-      @keyframes shine {
-        100% {
-          left: 125%;
-        }
-      }
-      .side_menu_hr {
-        border: 0;
-        height: 1px;
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255,255, 0.75), rgba(255, 255, 255, 0));
-      margin-block-end: 5px;
-        width: 100%;
-    }
-    
-    
-    .btn--angels{
-      background-image: url(../img/logo_fundacja_white.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      opacity: 0.8;
-      font-size: 1rem;
-        letter-spacing:1px;
-        color: #acacac00;
-    margin-top: -10px;
-          transition: 0.8s
-      }
-      .btn--angels:hover {
-        background-image: none;
-        color:#acacac;
-      
-      }
-      .btn--koalicja{
-        background-image: url(../img/kzd8h.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        padding-top: 20px;
-        padding-bottom: 25px;
-        opacity: 0.8;
-        font-size: 1rem;
-          letter-spacing:1px;
-          color: #acacac00;
-            transition: 0.8s
-        }
-        .btn--angels:hover {
-          background-image: none;
-          color:#acacac;
-        
-        }
-    
-    
-        /* ==========koalica.html======================*/
-        .wrapper_koalicja{
-          margin-top: 5vh;
-          display: flex;
-          flex-wrap: wrap;
-        }
-      .half-screen--kzdlogo{
-        background-image: url(../img/kzd8.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 60vh;
-        position: relative;
-    
-      }
-     .half-screen--text{
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      height: fit-content;
-      padding:20px
-    
-      }
-      .text_container{
-        width: 100%;
-      }
-      .button_container{
-        width: 100%;
-      }
-      .paragraph{
-        margin: 10px 5px 5px 15px;
-        font-size: 1.2rem;
-        text-align: justify;
-    
-      }
-      .map{
-        width: 100%;
-        margin-top: 50px;
-      }
-      .list{
-        margin:20px 15px 15px 25px;
-        font-size: 1.2rem;
-      }
-      .subtitle  {
-      text-align: center;
-      margin: 40px 1px 40px;
-  
-     } 
-    .subtitle-h1{
-      display:none;
-    }
-     /* footer */
-     .coded-div {
-      width: 80%;
-      text-align: left;
-      font-size: 0.8rem;;
-    }
-    footer {
-      width: 100%;
-      position: relative;
-      bottom: 0;
-      padding: 20px;
-      margin-top:20px;
-      height: 6vh;
-      display: flex;
-      /* justify-content: flex-end; */
-    }
-    
-    .priv-div {
-      width: 20%;
-      text-align: right;
-      font-size: 0.8rem;
-    }
-=======
-/* Extra small devices (phones, 600px and down)
-@media only screen and (max-width: 600px) {...} */
- @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-@IMPORT URL('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media  (max-width: 600px) {
-   
-   
-    .logo{
-      height: 10vh;
-      width: 250px;
-    background-image: url(../img/logo.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-bottom: 10px;
-    }
-    
-    
-    
-    .wrapper_main{
-        display: flex;
-flex-wrap: wrap;}
-    
-    .half_screen{
-        display:flex;
-        align-content: center;
-        width: 100%;
-    }
-
-    .half_screen--left{
-      margin-top: 10vh;;
-      max-height: auto;
-     
-    }
-    .half_screen--right{
-    margin-top: 5vh;
-width: 100%;
-      position: relative;
-    }
-    
-    #video_background {
-        position: relative;
-        width: 100vw;
-        height: 25vh;
+    align-content: center;
+}
+.half_screen--left{
+  display:none;
  
-        overflow: hidden;
-      }
-      
-      #video_background video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
+}
+.half_screen--right{
+margin-top: 10vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+justify-content: center;
+align-content: flex-start;
+}
 
-        opacity: 0;
-        transition: opacity 0.5s;
-      } 
-      
-      #video_background video.active {
-        opacity: 1;
-        pointer-events: auto;
-      }
-    
-      .side_menu{
-        width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    
-        justify-content: center;
-      }
-    
-      .side_menu_item{
-    width: 100%;
-    display:flex;
-    justify-content: center;
-    
-      }
-    
-      .btn{	
-    
-        position:relative;
-        overflow:hidden;
-        text-transform:uppercase;
-        text-decoration: none;
-        letter-spacing:5px;
-        color: #acacac;
-        font-size: 20px;
-        font-weight:lighter;
-        border: 0;
-        cursor: pointer;
-        padding: 10px 20px;
-        border: 1px solid rgba(143,144,145,0.2);
-        background-color:rgba(143,144,145,0.1);
-        transition: all 0.3s ease-in-out;
-        width: 80%;
-        
-        margin-bottom:25px;
-        background-color: rgba(56, 56, 92, 0.637);
-      }
-      .btn:focus {
-        color: #fff;
-        outline:none;
-      }
-      .btn--first{
-        margin-top: 25px;
-      }
-      .btn:before {
-        position: absolute;
-        top: 0;
-        left: -75%;
-        z-index: 2;
-        display: block;
-        content: '';
-        width: 50%;
-        height: 100%;
-        background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
-        background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
-        -webkit-transform: skewX(-25deg);
-        transform: skewX(-25deg);
-      }
-      .btn:hover{
-        color:#fff;
-        background-color: rgba(68, 68, 110, 0.637);
-    
-      }
-      .btn:hover::before {
-        -webkit-animation: shine .75s;
-        animation: shine .75s;
-      }
-      @-webkit-keyframes shine {
-        100% {
-          left: 125%;
-        }
-      }
-      @keyframes shine {
-        100% {
-          left: 125%;
-        }
-      }
-      .side_menu_hr {
-        border: 0;
-        height: 1px;
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255,255, 0.75), rgba(255, 255, 255, 0));
-      margin-block-end: 5px;
-        width: 100%;
-    }
-    
-    
-    .btn--angels{
-      background-image: url(../img/logo_fundacja_white.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      opacity: 0.8;
-      font-size: 1rem;
-        letter-spacing:1px;
-        color: #acacac00;
-    margin-top: -10px;
-          transition: 0.8s
-      }
-      .btn--angels:hover {
-        background-image: none;
-        color:#acacac;
-      
-      }
-      .btn--koalicja{
-        background-image: url(../img/kzd8h.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        padding-top: 20px;
-        padding-bottom: 25px;
-        opacity: 0.8;
-        font-size: 1rem;
-          letter-spacing:1px;
-          color: #acacac00;
-            transition: 0.8s
-        }
-        .btn--angels:hover {
-          background-image: none;
-          color:#acacac;
-        
-        }
-    
-    
-        /* ==========koalica.html======================*/
-        .wrapper_koalicja{
-          margin-top: 5vh;
-          display: flex;
-          flex-wrap: wrap;
-        }
-      .half-screen--kzdlogo{
-        background-image: url(../img/kzd8.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 60vh;
-        position: relative;
-    
-      }
-     .half-screen--text{
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      height: fit-content;
-      padding:20px
-    
-      }
-      .text_container{
-        width: 100%;
-      }
-      .button_container{
-        width: 100%;
-      }
-      .paragraph{
-        margin: 10px 5px 5px 15px;
-        font-size: 1.2rem;
-        text-align: justify;
-    
-      }
-      .map{
-        width: 100%;
-        margin-top: 50px;
-      }
-      .list{
-        margin:20px 15px 15px 25px;
-        font-size: 1.2rem;
-      }
-      .subtitle  {
-      text-align: center;
-      margin: 40px 1px 40px;
-  
-     } 
-    .subtitle-h1{
-      display:none;
-    }
-     /* footer */
-     .coded-div {
-      width: 80%;
-      text-align: left;
-      font-size: 0.8rem;;
-    }
-    footer {
-      width: 100%;
-      position: relative;
-      bottom: 0;
-      padding: 20px;
-      margin-top:20px;
-      height: 6vh;
-      display: flex;
-      /* justify-content: flex-end; */
-    }
-    
-    .priv-div {
-      width: 20%;
-      text-align: right;
-      font-size: 0.8rem;
-    }
->>>>>>> 15e526784c5520fc6540c166119074e8af684fc8
+
+.down_bar{
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+justify-content: center;
+}
+ 
+
+  .side_menu_item{
+display:flex;
+justify-content: center;
+width: 80%;
   }
+
+  .btn{	
+    position:relative;
+    overflow:hidden;
+    text-transform:uppercase;
+    text-decoration: none;
+    letter-spacing:5px;
+    color: #0b1f36;
+    font-size: 20px;
+font-weight:600;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid rgb(211, 229, 255);
+    background-color:rgba(160, 204, 245, 0.836);
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    min-height: 10vh;
+    margin-bottom:25px;
+  
+  }
+  .btn:focus {
+    color: #fff;
+    outline:none;
+  }
+
+  .btn:before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+  }
+  .btn:hover{
+    color:#fff;
+    background-color: rgba(7, 35, 87, 0.637);
+
+  }
+  .btn:hover::before {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
+  }
+  @-webkit-keyframes shine {
+    100% {
+      left: 125%;
+    }
+  }
+  @keyframes shine {
+    100% {
+      left: 125%;
+    }
+  }
+
+
+.btn--angels{
+  background-image: url(../img/logo_fundacja_white.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.8;
+  font-size: 1rem;
+    letter-spacing:1px;
+    color: #acacac00;
+      transition: 0.8s;
+   border: 1;
+   background-color:rgba(160, 204, 245, 0.0);
+  
+  }
+
+  .btn--koalicja{
+    background-image: url(../img/kzd8h.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0.8;
+    font-size: 1rem;
+      letter-spacing:1px;
+      color: #acacac00;
+        transition: 0.8s;
+        border: 1;
+        background-color:rgba(160, 204, 245, 0);
+        transition: all 0.3s ease-in-out;
+        min-height: 10vh;
+    }
+    .btn--koalicja:hover {
+      color:#fff;
+      background-color: rgba(7, 35, 87, 0);
+    }
+    .btn--angels:active,
+    .btn--angels:hover {
+      background-image: none;
+      color:#fff;
+      background-color: rgba(7, 35, 87, 0);
+    }
+/* =====================nawigacja menu =======================================*/
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 200px;
+
+}
+
+.menu > li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+}
+
+
+
+
+    /* ==========koalica.html======================*/
+
+  .half-screen--kzdlogo{
+    background-image: url(../img/kzd8.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(95, 142, 185);
+    width: 100%;
+    height: 60vh;
+
+  }
+ .half-screen--text{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  padding:10px;
+  color:rgb(32, 32, 32);
+
+  }
+  .text_container{
+    width: 100%;
+  }
+  .button_container{
+    width: 100%;
+  }
+  .paragraph{
+    margin: 10px 5px 5px 15px;
+    font-size: 1.2rem;
+    text-align: justify;
+
+  }
+  .map{
+    width: 100%;
+    margin-top: 50px;
+  }
+  .list{
+    margin:20px 15px 15px 25px;
+    font-size: 1.2rem;
+  }
+  .subtitle  {
+  text-align: center;
+  margin: 40px 1px 40px
+ } 
+
+ /* footer */
+ .coded-div {
+  width: 50%;
+  text-align: right;
+}
+.footer{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  background:rgba(3, 13, 34, 0.856); 
+  color: white;
+}
+
+
+.priv-div {
+  width: 50%;
+  text-align: right;
+}
+
+/*==============================ciastka =====================================*/
+
+#cookie-banner {
+  position: fixed;
+  bottom: -300px; /* Ukryte na starcie */
+  left: 0;
+  width: 100%;
+  background: #222;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  transition: bottom 0.5s ease-in-out;
+  z-index: 1000;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#cookie-banner.show {
+  bottom: 0px; /* Wysuwa pasek */
+}
+
+.cookie-buttons {
+  margin-top: 10px;
+}
+
+.cookie-buttons button {
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cookie-buttons button:hover {
+  background: #e68900;
+}
+
+.cookie-buttons .reject {
+  background: #888;
+}
+
+.cookie-buttons .reject:hover {
+  background: #777;
+}
+
+.cookie-link {
+  color: #ff9800;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.cookie-link:hover {
+  text-decoration: underline;
+}
+h1,
+h3,
+h2{
+  width: 90%;
+  font-weight: 700;
+  display: block;
+
+}
+h1{
+  font-size:1.8rem;
+  padding-bottom: 30px;
+}
+
+h2{
+  font-size: 1.6rem;  
+  padding-bottom: 20px;
+}
+h3{
+  font-size: 1.4rem;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+}
+h4{
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  display: block;
+  width: 90%;
+  
+}
+h5{
+  width: 100%;
+}
+p{
+  font-size: 1.2rem;
+  padding-bottom: 20px;
+}
+.list{
+  font-size: 1.2rem;
+  text-align: left;
+}
+li{
+  padding-bottom: 10px;
+}
+#table-of-contents a {
+  color: #303ea3;
+  text-decoration: none;
+}
+#spis{
+  margin-bottom: 30px;
+}
+
+table.minimalistBlack {
+  border: 3px solid #000000;
+  width: 98%;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.minimalistBlack td, table.minimalistBlack th {
+  border: 1px solid #000000;
+  padding: 1px 1px;
+}
+
+table.minimalistBlack th>p,
+table.minimalistBlack td>p{
+  padding-bottom: 5px;
+  font-size: 0.8rem;
+}
+
+table.minimalistBlack thead {
+  background: #CFCFCF;
+  background: -moz-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+  background: -webkit-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+  background: linear-gradient(to bottom, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+  border-bottom: 3px solid #000000;
+}
+table.minimalistBlack thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000;
+  text-align: left;
+}
+table.minimalistBlack tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  border-top: 3px solid #000000;
+}
+table.minimalistBlack tfoot td {
+  font-size: 14px;
+}
+
+
+
+
+
+
+.menu-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.menu-toggle .icon {
+  font-size: 24px;
+}
+.menu {
+  display: none;
+  background: rgba(3, 13, 34, 0.856);  
+  padding: 10px;
+  width: 100%;
+}
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+.menu ul li {
+  padding: 5px 0;
+}
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+.menu.active {
+  display: block;
+}
