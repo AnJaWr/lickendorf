@@ -5,10 +5,10 @@ function loadCSSBasedOnDevice() {
     loadCSS("css/small_screen_style.css?v1");
   } else if (window.matchMedia("(min-width: 601px) and (max-width: 1024px)").matches) {
     // Wczytaj CSS dla średniego ekranu
-    loadCSS("css/style.css?v1");
+    loadCSS("css/style.css?v2");
   } else {
     // Wczytaj CSS dla dużego ekranu
-    loadCSS("css/style.css?v1");
+    loadCSS("css/style.css?v2");
   }
 }
 
