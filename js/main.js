@@ -1,29 +1,4 @@
-function loadCSSBasedOnDevice() {
-  // Sprawdzenie typu urządzenia
-  if (window.matchMedia("(max-width: 600px)").matches) {
-    // Wczytaj CSS dla małego ekranu
-    loadCSS("css/small_screen_style.css?v1");
-  } else if (window.matchMedia("(min-width: 601px) and (max-width: 1024px)").matches) {
-    // Wczytaj CSS dla średniego ekranu
-    loadCSS("css/style.css?v2");
-  } else {
-    // Wczytaj CSS dla dużego ekranu
-    loadCSS("css/style.css?v2");
-  }
-}
 
-function loadCSS(filename) {
-  var link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.href = filename;
-  document.head.appendChild(link);
-}
-
-// Wywołanie funkcji w momencie zmiany wielkości ekranu
-window.addEventListener("resize", loadCSSBasedOnDevice);
-
-// Wywołanie funkcji przy załadowaniu strony
-window.addEventListener("load", loadCSSBasedOnDevice);
 
 function redirectToURL(event) {
   event.preventDefault(); 
