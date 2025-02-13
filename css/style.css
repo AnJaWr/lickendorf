@@ -87,6 +87,7 @@ padding:50px;}
     flex-wrap: wrap;
     align-content: center;
       width: 48%;
+    
 }
 .description{
   padding: 40px;
@@ -106,11 +107,14 @@ margin-top: 10vh;
 justify-content: space-between;
 align-content: flex-start;
 }
-
+.center{
+  justify-content: center;
+}
 
 .probono{
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   min-height: 25vh;
   background-color: #0b1f36;
@@ -190,6 +194,10 @@ font-weight:600;
 width: 80%;
     min-height: 10vh;
     margin-bottom:25px;
+  }
+
+  .btn--min{
+    width: 50%;
   }
   @-webkit-keyframes shine {
     100% {
@@ -512,11 +520,11 @@ nav.menu{
   width: 50%;
 }
 #omnie{
-  min-height: 20vh;
+  min-height: 15vh;
 }
 
 
-/* fonty*/
+/* ================================fonty=====================================*/
 .great-vibes-regular 
  {
   font-weight: 400;
@@ -531,6 +539,14 @@ nav.menu{
   font-style: normal;
   font-size: 2.5em;
 }
+/* ======================================== img ==================================*/
+.responsive {
+  max-width: 70%;
+  height: auto;
+}
+
+
+/* ========================================== media ====================================================*/
 
 @media (max-width: 1024px) {
   /* Stylowanie dla urządzeń o szerokości od 601px do 1024px */
@@ -544,7 +560,7 @@ nav.menu{
   background-image: url(../img/524.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-color: white;
+
 }
 .body{
   background: rgb(255,255,255);
@@ -775,7 +791,9 @@ font-weight:600;
 }
 
 
-
+.btn--min{
+  width: 90%;
+}
 
     /* ==========koalica.html======================*/
 
@@ -993,7 +1011,7 @@ table.minimalistBlack tfoot td {
 }
 
 
-
+/* =============================== menu ============================================== */
 
 
 
@@ -1025,4 +1043,13 @@ table.minimalistBlack tfoot td {
 }
 .menu.active {
   display: block;
-}}
+}
+
+#omnie{
+  min-height: 10vh;
+}
+.half_screen {
+  width: 100%;
+  
+}
+}
