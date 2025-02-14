@@ -209,6 +209,7 @@ font-weight:600;
   .btn-probono{
     position:relative;
     overflow:hidden;
+    text-transform: none;
     text-decoration: none;
     color: #fff;
     font-size: 1rem;
@@ -378,6 +379,13 @@ width: 80%;
 .priv-div {
   width: 50%;
   text-align: right;
+}
+
+.quote{
+  border: 2px solid rgb(95, 104, 156);
+  border-radius: 5px;
+  padding: 20px;
+
 }
 
 /*===================================================ciastka ================================================================*/
@@ -598,7 +606,19 @@ background-repeat: no-repeat;
   background-size: contain;
   background-repeat: no-repeat;
 }
+.img6{
 
+    background-image: url(../img/baner_glowna-01.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+/* ============================telefon -=================================*/
+.protect-tel::after {
+  content: attr(data-part1) '-' attr(data-part2) '-' attr(data-part3);
+}
 /* ========================================== media ====================================================*/
 
 @media (max-width: 1024px) {
