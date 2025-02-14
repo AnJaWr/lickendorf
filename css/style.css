@@ -37,6 +37,16 @@ background-image: url(../img/logo.png);
 background-repeat: no-repeat;
 background-size: contain;}
 
+.link{
+  text-decoration: none;
+  font-weight: 600;
+  color:#0b1f36;
+}
+.link:hover,
+.link:active{
+  color: #690202;
+}
+
 
 .nav{
   display: flex;
@@ -146,6 +156,20 @@ font-weight:600;
     min-height: 10vh;
     margin-bottom:25px;
   
+  }
+  .btn-leczenie{
+
+    color: #0b1f36;
+    font-size: 1rem;
+font-weight:600;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid rgb(211, 229, 255);
+    background-color:rgba(160, 204, 245, 0.014);
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    min-height: 10vh;
+    margin-bottom:25px;
   }
   .btn-probono:focus,
   .btn:focus {
@@ -545,6 +569,16 @@ nav.menu{
   max-width: 70%;
   height: auto;
 }
+.img1{
+background-image: url(../img/145.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+}
+.img2{
+  background-image: url(../img/110149.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  }
 
 
 /* ========================================== media ====================================================*/
