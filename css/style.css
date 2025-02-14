@@ -588,6 +588,11 @@ background-repeat: no-repeat;
   background-size: cover;
   background-repeat: no-repeat;
 }
+.img4{
+  background-image: url(../img/dlonmi.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;  
+}
 .img5{
   background-image: url(../img/robot.jpg);
   background-size: contain;
@@ -708,9 +713,15 @@ margin-top: 10vh;
 justify-content: center;
 align-content: flex-start;
 }
-
+.img1,
+.img2,
+.img3,
+.img4,
 .img5{
   min-height: 40vh;
+}
+.img2{
+  display: none;
 }
 .down_bar{
   width: 100%;
@@ -723,7 +734,7 @@ justify-content: center;
   .side_menu_item{
 display:flex;
 justify-content: center;
-width: 80%;
+width: 90%;
   }
 
   .btn{	
@@ -824,6 +835,11 @@ font-weight:600;
       background-image: none;
       color:#fff;
       background-color: rgba(7, 35, 87, 0);
+    }
+    .btn-leczenie{
+      background-color: #fff;
+
+      
     }
 /* =====================nawigacja menu =======================================*/
 
@@ -1101,6 +1117,7 @@ table.minimalistBlack tfoot td {
 }
 .half_screen {
   width: 100%;
+  justify-content: center;
   
 }
 }
