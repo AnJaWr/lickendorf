@@ -99,6 +99,9 @@ padding:50px;}
       width: 48%;
     
 }
+.screen_h{
+  min-height: 80vh;
+}
 .description{
   padding: 40px;
 }
@@ -444,6 +447,7 @@ h2{
 h1{
   font-size:1.8rem;
   padding-bottom: 30px;
+  margin-top:45px
 }
 
 h2{
@@ -579,7 +583,16 @@ background-repeat: no-repeat;
   background-size: cover;
   background-repeat: no-repeat;
   }
-
+.img3{
+    background-image: url(../img/2148465875.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.img5{
+  background-image: url(../img/robot.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
 /* ========================================== media ====================================================*/
 
@@ -681,6 +694,7 @@ padding:10px;}
 .half_screen{
     display:flex;
     align-content: center;
+    padding:20px
 }
 .half_screen--left{
   display:none;
@@ -695,7 +709,9 @@ justify-content: center;
 align-content: flex-start;
 }
 
-
+.img5{
+  min-height: 40vh;
+}
 .down_bar{
   width: 100%;
   display:flex;
