@@ -2,17 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @IMPORT URL('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 *{
-
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;  
     font-family: 'Ubuntu', sans-serif;
 }
 
 .body_main{
-  /* background-color: black;
-  background: rgb(2,0,36); */
   background-image: url(../img/524.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -38,10 +34,6 @@ justify-content: space-around;
 background-image: url(../img/logo.png);
 background-repeat: no-repeat;
 background-size: contain;}
-
-
-
-
 .nav{
   display: none;
 }

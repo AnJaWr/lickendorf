@@ -33,3 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error('Nie znaleziono elementu o id="spis".');
     }
 });
+
+window.addEventListener("DOMContentLoaded", function() {
+    var logo = document.getElementById("logo");
+  
+    logo.addEventListener("click", function() {
+      window.location.href = "../index.html";
+    });
+  });

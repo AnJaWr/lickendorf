@@ -16,13 +16,7 @@ window.addEventListener("DOMContentLoaded", function() {
     buttons[i].addEventListener("click", redirectToURL);
   }
 });
-window.addEventListener("DOMContentLoaded", function() {
-  var logo = document.getElementById("logo");
 
-  logo.addEventListener("click", function() {
-    window.location.href = "index.html";
-  });
-});
 
 window.addEventListener("DOMContentLoaded", function() {
   var cookieNotice = localStorage.getItem("cookieNotice");

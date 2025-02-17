@@ -612,7 +612,7 @@ nav.menu{
 
 /* ======================================== img ==================================*/
 .responsive {
-  max-width: 70%;
+  max-width: 90%;
   height: auto;
 }
 .img1-min{
@@ -639,18 +639,37 @@ background-repeat: no-repeat;
   background-repeat: no-repeat;  
 }
 .img5{
-  background-image: url(../img/robot.jpg);
-  background-size: contain;
+  background-image: url(../img/robot-srodoperacyjny.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
 }
-.img6{
 
-    background-image: url(../img/baner_glowna-01.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
+.img7{
+
+  background-image: url(../img/seeg.jpg);
+  background-size:auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.img8{
+  background-image: url(../img/Odkotwiczennie_stozka_rdzeniowego.jpeg);
+  background-size:auto;
+  background-position: center;
+  background-repeat: no-repeat;
 
 }
+.img9{
+  background-image: url(../img/Leczenie-zastawkowe-wodoglowia.jpg);
+  background-size:auto;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.img-smaller{
+  width: 50%;
+}
+
 #leczenie{
   margin-top: 80px;
 }
@@ -795,6 +814,9 @@ background-repeat: no-repeat;
 .img2{
   display: none;
 }
+.img-smaller{
+  width: 100%;
+}
 .down_bar{
   width: 100%;
   display:flex;
@@ -820,7 +842,6 @@ width: 90%;
 font-weight:600;
     cursor: pointer;
     padding: 10px 20px;
-    border: 1px solid rgb(211, 229, 255);
     background-color:rgba(160, 204, 245, 0.836);
     transition: all 0.3s ease-in-out;
     width: 100%;
@@ -910,7 +931,7 @@ font-weight:600;
     }
     .btn-leczenie{
       background-color: #fff;
-      width: 80%;
+      width: 100%;
 
       
     }
@@ -959,6 +980,9 @@ font-weight:600;
   padding:10px;
   color:rgb(32, 32, 32);
 
+  }
+  .half_screen--leczenie{
+    margin:0px;
   }
 
   
@@ -1200,10 +1224,18 @@ table.minimalistBlack tfoot td {
 .half_screen {
   width: 100%;
   justify-content: center;
+  padding:5px;
   
 }
 
 #leczenie{
   margin-top: 80px;
+}
+.white{
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.description{
+  padding:20px
 }
 }
