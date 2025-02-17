@@ -25,7 +25,7 @@ html {
   color: #f1f1f1;
   width: 100%;
   padding: 20px;
-height: 13vh;
+height: 10vh;
   display:flex;
   align-content: center;
 justify-content: space-around;
@@ -57,7 +57,12 @@ background-size: contain;}
   margin-right:20px;
 
 }
-
+.white{
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+}
 .nav_a  {
   font-size: 1.2em;
   color: white;
@@ -104,6 +109,8 @@ padding:50px;}
 }
 .description{
   padding: 40px;
+  line-height: 2em;
+  min-height: 70vh;
 }
 .half_screen--left{
   margin-top: 10vh;;
@@ -120,6 +127,12 @@ margin-top: 10vh;
 justify-content: space-between;
 align-content: flex-start;
 }
+.half_screen--leczenie{
+  justify-content: space-around;
+  margin: 5vh 0vh 5vh 0vh;
+  
+    
+      }
 .center{
   justify-content: center;
 }
@@ -128,13 +141,20 @@ align-content: flex-start;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-around;
-  min-height: 25vh;
+  min-height: 50vh;
   background-color: #0b1f36;
-  padding: 30px 5px 30px 5px;
-}
- 
 
+}
+
+.separator{
+    width: 100%;
+    min-height: 8vh;
+    background-color: #0b1f36;
+
+  
+}
   .side_menu_item{
 display:flex;
 justify-content: center;
@@ -288,6 +308,9 @@ width: 80%;
       color:#fff;
       background-color: rgba(7, 35, 87, 0);
     }
+
+    
+
 /* =============================================================nawigacja menu ========================================*/
 
 .menu {
@@ -551,13 +574,14 @@ nav.menu{
   padding:15px 15px 0px 15px;
   margin-bottom: 5px;
   width: 48%;
+  height: 100%;
  
 }
 .empty{
   width: 50%;
 }
 #omnie{
-  min-height: 15vh;
+  min-height: 10vh;
 }
 
 
@@ -570,16 +594,29 @@ nav.menu{
   font-family: "Great Vibes", serif;
 
 }
+.great-vibes-regular:hover {
+  color:#fff;
+  background-color: rgba(7, 35, 87, 0);
+}
 .emilys-candy-regular {
   font-family: "Emilys Candy", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 2.5em;
 }
+.emilys-candy-regular:hover{
+
+    color:#fff;
+    background-color: rgba(7, 35, 87, 0);
+  }
+
 /* ======================================== img ==================================*/
 .responsive {
   max-width: 70%;
   height: auto;
+}
+.img1-min{
+  display: none;
 }
 .img1{
 background-image: url(../img/145.jpg);
@@ -614,6 +651,9 @@ background-repeat: no-repeat;
     background-repeat: no-repeat;
 
 }
+#leczenie{
+  margin-top: 80px;
+}
 
 /* ============================telefon -=================================*/
 .protect-tel::after {
@@ -624,7 +664,10 @@ background-repeat: no-repeat;
 @media (max-width: 1024px) {
   /* Stylowanie dla urządzeń o szerokości od 601px do 1024px */
 
+  *{
 
+    font-family: 'Ubuntu', sans-serif;
+  }
 
 
 .body_main{
@@ -725,6 +768,8 @@ padding:10px;}
   display:none;
  
 }
+
+
 .half_screen--right{
 margin-top: 10vh;
   width: 100%;
@@ -733,6 +778,12 @@ margin-top: 10vh;
 justify-content: center;
 align-content: flex-start;
 }
+.img1-min{
+  background-image: url(../img/145.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+}
+.img1-min,
 .img1,
 .img2,
 .img3,
@@ -740,6 +791,7 @@ align-content: flex-start;
 .img5{
   min-height: 40vh;
 }
+.img1,
 .img2{
   display: none;
 }
@@ -764,7 +816,7 @@ width: 90%;
     text-decoration: none;
     letter-spacing:5px;
     color: #0b1f36;
-    font-size: 20px;
+    font-size: 1.4em;
 font-weight:600;
     cursor: pointer;
     padding: 10px 20px;
@@ -858,6 +910,7 @@ font-weight:600;
     }
     .btn-leczenie{
       background-color: #fff;
+      width: 80%;
 
       
     }
@@ -881,6 +934,10 @@ font-weight:600;
 .btn--min{
   width: 90%;
 }
+.btn-probono{
+  text-transform: none;
+  font-size: 3em;
+}
 
     /* ==========koalica.html======================*/
 
@@ -903,6 +960,8 @@ font-weight:600;
   color:rgb(32, 32, 32);
 
   }
+
+  
   .text_container{
     width: 100%;
   }
@@ -947,7 +1006,9 @@ font-weight:600;
   width: 50%;
   text-align: right;
 }
-
+.probono{
+  min-height: 60vh;
+}
 /*==============================ciastka =====================================*/
 
 #cookie-banner {
@@ -1013,22 +1074,22 @@ h2{
 
 }
 h1{
-  font-size:1.8rem;
+  font-size:2.2em;
   padding-bottom: 30px;
 }
 
 h2{
-  font-size: 1.6rem;  
+  font-size: 2rem;  
   padding-bottom: 20px;
 }
 h3{
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   padding-bottom: 10px;
   padding-top: 10px;
 
 }
 h4{
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   padding-bottom: 10px;
   padding-top: 10px;
   display: block;
@@ -1041,6 +1102,7 @@ h5{
 p{
   font-size: 1.2rem;
   padding-bottom: 20px;
+  font-weight: 500;
 }
 .list{
   font-size: 1.2rem;
@@ -1139,5 +1201,9 @@ table.minimalistBlack tfoot td {
   width: 100%;
   justify-content: center;
   
+}
+
+#leczenie{
+  margin-top: 80px;
 }
 }
