@@ -836,6 +836,10 @@ background-repeat: no-repeat;
 .img-smaller{
   width: 100%;
 }
+.img8{
+min-height: 50vh;
+background-size: contain;
+}
 .down_bar{
   width: 100%;
   display:flex;
