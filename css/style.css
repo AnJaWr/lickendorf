@@ -660,7 +660,7 @@ background-repeat: no-repeat;
 }
 .img8{
   background-image: url(../img/Odkotwiczennie_stozka_rdzeniowego.jpeg);
-  background-size:auto;
+  background-size:contain;
   background-position: center;
   background-repeat: no-repeat;
 
