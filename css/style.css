@@ -583,6 +583,9 @@ nav.menu{
   height: 100%;
  
 }
+.milky-mobile{
+  background-color: #ffffff00;
+}
 .empty{
   width: 50%;
 }
@@ -817,7 +820,9 @@ padding:10px;}
   display:none;
  
 }
-
+.milky-mobile{
+  background-color: #ffffff7e;
+}
 
 .half_screen--right{
 margin-top: 10vh;
