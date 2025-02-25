@@ -675,6 +675,14 @@ background-repeat: no-repeat;
   background-repeat: no-repeat;
 
 }
+.img10{
+  background-image: url(../img/marek_lickendorf_z_lwem.jpg);
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
+ min-height: 70%;
+
+}
 .img-smaller{
   width: 75%;
 }
@@ -842,6 +850,10 @@ background-repeat: no-repeat;
 .img8{
 min-height: 50vh;
 background-size: contain;
+}
+.img10{
+  width: 100%;
+  min-height: 60vh;
 }
 .down_bar{
   width: 100%;
