@@ -10,7 +10,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 1em;
+
 }
 html {
   scroll-behavior: smooth;
@@ -618,7 +618,7 @@ nav.menu{
 
 /* ======================================== img ==================================*/
 .responsive {
-  max-width: 90%;
+  max-width: 60%;
   height: auto;
 }
 .img1-min{
@@ -653,10 +653,13 @@ background-repeat: no-repeat;
 
 .img7{
 
-  background-image: url(../img/seeg.jpg);
-  background-size:auto;
+  background-image: url(../img/SEEG.jpeg);
+  background-size:contain;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 70vh;
+
+  
 }
 .img8{
   background-image: url(../img/Odkotwiczennie_stozka_rdzeniowego.jpeg);
@@ -666,14 +669,14 @@ background-repeat: no-repeat;
 
 }
 .img9{
-  background-image: url(../img/Leczenie-zastawkowe-wodoglowia.jpg);
+  background-image: url(../img/leczenie_zastawkowe.jpg);
   background-size:auto;
   background-position: center;
   background-repeat: no-repeat;
 
 }
 .img-smaller{
-  width: 50%;
+  width: 75%;
 }
 
 #leczenie{
@@ -1125,22 +1128,22 @@ h2{
 
 }
 h1{
-  font-size:2.2em;
+  font-size:2em;
   padding-bottom: 30px;
 }
 
 h2{
-  font-size: 2rem;  
+  font-size: 1.8rem;  
   padding-bottom: 20px;
 }
 h3{
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   padding-bottom: 10px;
   padding-top: 10px;
 
 }
 h4{
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   padding-bottom: 10px;
   padding-top: 10px;
   display: block;
@@ -1167,7 +1170,7 @@ li{
   text-decoration: none;
 }
 #spis{
-  margin-bottom: 30px;
+  margin: 10px 15px 30px 15px;
 }
 
 table.minimalistBlack {
